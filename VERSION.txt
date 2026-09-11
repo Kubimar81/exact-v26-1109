@@ -1,0 +1,21 @@
+EXACT V26
+Wersja: 11.09.2026 (V26 Liga) · GitHub exact-v26-1109
+- 11.09.2026 23:56 GitHub snapshot: pulpit bez listy dnia, Archiwum 2 h po HIT/MISS, 1B OUT, silnik HOLD. Restore: Kubimar81/exact-v26-1109.
+- 11.09.2026 23:50 Archiwum: karta schodzi z pulpitu 2 h po HIT/MISS (nie 24 h). Zimny folder zostaje — otwarcie / restoreFromCold. Silnik HOLD.
+- 11.09.2026 23:45 Pulpit: zdjęta lista dnia SCAN_EIGHT i szablony meczów. Operator dodaje karty sam (Nowa analiza / skan). /dzis → pulpit. Silnik HOLD.
+- 11.09.2026 12:55 V-League po kanonizacji („V-League” → id 340, nie timeout). I Liga / Thai / Singapore: rożne z Flashscore. OCR Premier League + Tampines = Singapore 368. Silnik HOLD.
+- 11.09.2026 12:40 V-League / Thai League 1 / Singapore PL / I Liga: OCR „Premier League” ≠ EPL 39 (Tampines). Wietnam i Tajlandia z kuponu id 340/296. Polonia Warszawa–Bytom = I Liga 107, rożne z Flashscore. Silnik HOLD.
+- 11.09.2026 12:20 matching: Praga=Praha, Bukareszt=Bucuresti, FC Wil 1900 (rok założenia ≠ CSKA 1948). Czechy-FNL id 346 nie 1. liga 345. Challenge League 208 nie Super 207. Jazz/KPV = Ykkönen 245. Rożne FNL/Challenge/Ykkönen z Flashscore. Silnik HOLD.
+- 11.09.2026 12:00 matching kart z dziś: Praga=Praha, Bukareszt=Bucuresti, FC Wil 1900 (rok założenia ≠ CSKA 1948). Czechy-FNL → id 346 (nie 1. Liga 345). Challenge League → 208 (nie Super League 207). Jazz/KPV Ykkönen 245 (nie Veikkausliiga). Rożne/SOT z Flashscore dla FNL/Challenge/Ykkönen. Silnik HOLD — K0–K18 nietknięte.
+- 11.09.2026 10:50 STANDARD_SELEKCJI.md z załącznika operatora — nadpisany w programie i na GitHub (exact-v26-0909). 1b OUT. Conf nie tnie. Silnik HOLD.
+- 11.09.2026 dokument STANDARD_SELEKCJI.md: sito operatora po audycie 08–10.09 + T23/archiwum od 03.09. 1b OUT. Conf nie tnie kuponu (42/51 HIT <70; 08.09 całe <70). Pierwsza fala bez faworyta A vs żywego domu i bez Uganda/Chile/COL B. Short = input. TOP3 z programu. Silnik HOLD — K0–K18 nietknięte.
+- 10.09.2026 23:10 Chile Primera B / Colombia Primera B: API-Football bez boxu (rożne/SOT=0). Program bierze SOT+rożne z Flashscore (liga-de-ascenso / primera-b), min. 2 mecze. Kartki z API zostają. Deportes Recoleta ≠ Antofagasta w średniej. Silnik HOLD.
+- 10.09.2026 22:40 homonim Deportes: Santa Cruz ≠ Antofagasta. Prefiks Deportes/Independiente/Universidad nie skleja klubów w API (rosterNameScore < 40). Search nie pyta samego „Deportes”. K11 hardStops zostaje. Silnik HOLD.
+- 10.09.2026 nazwa w UI: EXACT V26 · V26 Liga.
+- 09.09.2026 15:52 backup V26 Liga.rar / V26 Liga.zip. Silnik HOLD.
+- 09.09.2026 12:10 OCR Superbet „Al Drah” = Al Diriyah (K11 hardStops). Al Riyadh nietknięty. Silnik HOLD.
+- 09.09.2026 09:35 close-day: pulpit „Dziś — lista exact” = SCAN_EIGHT (8 meczów do analizy V26). Karty 08.09 w Archiwum/_cold (hot=0). Obserwacja: lista-08 + DNA 1b + HOLD MISS programu. Silnik nietknięty.
+- 09.09.2026 Selekcja DNA 1b: cztery AND-y (Ettifaq / Qadsiah / Saints / Bolton) z datą i rollback. HIT-y 6 dni (Kalmar/Beitar/Brześć/Incheon/…) nie odrzucone.
+- 09.09.2026 08:38 Obserwacja folder + Selekcja DNA 1b (HOLD silnik), sitko 2×2 bez zmian.
+- 08.09.2026 13:45 homonimy: OCR Premier League / Premiership. Egipt → id 233 (nie EPL 39). NIFL Larne–Bangor → id 408 (nie Szkocja 179). Al Qadsiah = Al-Qadisiyah FC. Guard EPL i sitko 1.40–1.75 nietknięte.
+- 08.09.2026 Selekcja: zakładka Standard selekcji meczów (Warstwa 1 input / Warstwa 2 kupon / dwa kupony po dwa / profil Craiova poza dwójką). Silnik nietknięty.

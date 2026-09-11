@@ -1,0 +1,48 @@
+{
+  "season": "2025/26",
+  "updated": "2026-05-31",
+  "clubs": [
+    {
+      "id": "arsenal",
+      "name": "Arsenal",
+      "league": "Premier League",
+      "coachChanged": false,
+      "promoted": false,
+      "relegated": false,
+      "squadRebuild": false,
+      "newSigningsAttackDefense": 0,
+      "prev": {
+        "playedHome": 19,
+        "playedAway": 19,
+        "gfHome": 2.15,
+        "gaHome": 0.84,
+        "gfAway": 1.79,
+        "gaAway": 1.05,
+        "xgHome": 2.08,
+        "xgaHome": 0.91,
+        "xgAway": 1.72,
+        "xgaAway": 1.11
+      },
+      "sources": ["https://fbref.com/en/squads/18bb7c10/2025-2026/Arsenal-Stats"]
+    },
+    {
+      "id": "aston-villa",
+      "name": "Aston Villa",
+      "league": "Premier League",
+      "coachChanged": false,
+      "promoted": false,
+      "relegated": false,
+      "squadRebuild": false,
+      "newSigningsAttackDefense": 0,
+      "prev": {
+        "playedHome": 19,
+        "playedAway": 19,
+        "gfHome": 1.58,
+        "gaHome": 1.21,
+        "gfAway": 1.21,
+        "gaAway": 1.47
+      },
+      "sources": ["https://fbref.com/en/squads/8602292d/2025-2026/Aston-Villa-Stats"]
+    }
+  ]
+}

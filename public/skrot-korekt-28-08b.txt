@@ -1,0 +1,28 @@
+EXACT V26 — skrót 28.08.2026b (St. Pat's / Waterford)
+
+Reguły ogólne. Działają na każdym nowym meczu.
+
+1. λ venue
+gfHome gospodarza / gfAway gościa. Nie spłaszczaj L8 do 1.50/1.50.
+
+2. H2H 36 miesięcy
+2019–2020 nie punktuje. Brak bieżących H2H = 0 pkt, nie 4.
+
+3. UGO etykieta
+Kurs <1.35 wyłącza UGO (zostaje). Powód: override kursu, nie „poniżej 2/4”.
+2:1 w TOP3 przy kurs≤1.50 + CS≠Strong nazywa się Mixed/HV, nie Mixed/UGO.
+
+4. Forma z L5
+5/5 + GD≥+8 = 18–20. 2W–3D GD+3 = 8–11. Nie n meczów.
+
+5. 2:2 vs 1:1
+Ta sama rodzina remisów. 2:2 nie siada w TOP3 obok 1:1.
+Low Scoring (O2.5 formy) zrzuca 2:2.
+
+6. Controlled Home + kurs ≤1.40 + Remis Safety NIE
+CORE 1:0/2:0. 1:1 nie jest EPL1.
+
+7. K12–K18
+EPF, Conf 0–105, CS/BTTS — liczby. Zakaz ogólników.
+
+Zostaje: UGO off <1.35 · Soft Band · superprzewaga czysty CORE · Conf <70 = No execution.

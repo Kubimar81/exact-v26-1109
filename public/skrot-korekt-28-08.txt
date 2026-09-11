@@ -1,0 +1,4 @@
+────────────────────────────────
+03.09 — 25.29 T-60 nie rusza K0
+Przycisk XI zapisuje tylko skład. Forma, xG, SOT zostają. Nie wraca „Dociągam K5”. Na telefonie menu nie nachodzi na kartę gdy CSS się spóźni.
+

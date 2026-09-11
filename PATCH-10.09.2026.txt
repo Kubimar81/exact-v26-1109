@@ -1,0 +1,26 @@
+EXACT V26 · V26 Liga — poprawki 10.09.2026
+
+1) Homonim Deportes (K11)
+Problem: EPL zablokowane — gospodarz z API (Deportes Santa Cruz)
+nie zgadza się z Deportes Antofagasta.
+Przyczyna: API sklejało kluby po wspólnym słowie „Deportes”.
+Poprawka: prefiksy Deportes / Independiente / Universidad nie liczą
+się jako nazwa klubu.
+
+2) Rożne / SOT / kartki — Chile Primera B i Colombia Primera B
+Problem: Antofagasta–Cobreloa i Patriotas–Barranquilla miały
+rożne=0, strzały celne=0. Kartki z API (sezon) były.
+Przyczyna: API-Football nie oddaje boxu dla lig 266 i 240.
+Program nie wołał Flashscore, bo te ligi nie były na liście
+„sparse box”.
+Poprawka: Flashscore liga-de-ascenso (Chile) i primera-b
+(Kolumbia). Średnia z min. 2 meczów. Kartki z API zostają.
+Deportes Recoleta ≠ Deportes Antofagasta przy średniej.
+
+Pliki:
+  src/lib/v26/api-football.ts
+  src/lib/v26/leagues.ts
+  src/lib/v26/set-piece-fallback.ts
+  src/lib/v26/flashscore-box.ts
+  src/lib/v26/fotmob-box.ts
+  src/lib/v26/v26-fixes.test.ts

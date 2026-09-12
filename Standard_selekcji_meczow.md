@@ -1,6 +1,6 @@
 # Standard selekcji meczów — EXACT V26 Liga
 
-Wersja: 11.09.2026 (best-of 05.09 + rano 08.09).
+Wersja: 12.09.2026 (sitko kuponu 2×2 · 1:0 / 0:1). Sito operatora 11.09 zostaje.
 Silnik K0–K18, CORE, TOP3: HOLD. Ten plik zmienia tylko sito operatora.
 
 Źródło: praktyka 05.09 (10 HIT) + sitko rana 08.09 (9 HIT). Conf nie tnie listy.
@@ -53,18 +53,25 @@ Na kupon tylko gdy karta sama da CORE 1:0 (Larne).
 
 ---
 
-## Warstwa 2 — po pełnym V26 K0–K18
+## Warstwa 2 — po K18: sitko kuponu 2×2 · najlepsze mecze pod 1:0 / 0:1
 
 Operator bierze TOP3 z programu. Nic nie dopisuje (ani 1:1, ani 2:0, ani 3:0).
 Nie łata slotów.
 
-Na dwójkę 2×2 tylko gdy karta da CORE 1:0 albo 0:1.
+Na dwójkę tylko gdy karta da CORE 1:0 albo 0:1
+oraz:
+- BTTS NIE albo U2.5
+- dom → 1:0, wyjazd → 0:1
+- Soft / sitko; short z EPL 2:1 zostaje na TOP3, nie na dwójkę
 
 Zostaje na rozliczeniu TOP3, nie forsuj na dwójkę:
 - 1:1 / 0:0 / 1:2 / 2:1
+- short 2:0 / 2:1 / 1:0
 
 Nie jako EPL1:
 - 3:0 / 4:0 / 3:1
+
+H2H, xG, kartki, seria, Conf — na karcie jako info. Nie tną dwójki.
 
 Profil chaos (Craiova: 3:1 / 2:2 / 0:3) poza dwójką.
 Martwy underdog = sitko kuponu, nie listy.
@@ -74,7 +81,7 @@ Dwa kupony po dwa.
 ### Conf
 
 Conf jest na karcie jako informacja.
-Nie tnie listy.
+Nie tnie listy. Nie tnie dwójki.
 
 Z archiwum 03–09.09: 42/51 HIT < 70. Całe 08.09 (9 HIT) było 45.7–63.8.
 Bez XI program sam stawia Conf 69% / NO EXECUTION. To nie jest sitko rana.

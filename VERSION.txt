@@ -1,5 +1,6 @@
 EXACT V26
-Wersja: 11.09.2026 (V26 Liga) · GitHub exact-v26-1109
+Wersja: 12.09.2026 (V26 Liga) · GitHub exact-v26-1109
+- 12.09.2026 07:44 Selekcja Warstwa 2: sitko kuponu 2×2. Na dwójkę tylko CORE 1:0/0:1 + BTTS NIE albo U2.5; dom 1:0, wyjazd 0:1; Soft/sitko. Short 2:0/2:1/1:0 i EPL 2:1 zostają na TOP3. 1:1/0:0/1:2/2:1 nie forsuj. 3:0/4:0/3:1 nie EPL1. H2H/xG/kartki/seria/Conf = info, nie tną dwójki. Silnik HOLD.
 - 11.09.2026 23:56 GitHub snapshot: pulpit bez listy dnia, Archiwum 2 h po HIT/MISS, 1B OUT, silnik HOLD. Restore: Kubimar81/exact-v26-1109.
 - 11.09.2026 23:50 Archiwum: karta schodzi z pulpitu 2 h po HIT/MISS (nie 24 h). Zimny folder zostaje — otwarcie / restoreFromCold. Silnik HOLD.
 - 11.09.2026 23:45 Pulpit: zdjęta lista dnia SCAN_EIGHT i szablony meczów. Operator dodaje karty sam (Nowa analiza / skan). /dzis → pulpit. Silnik HOLD.

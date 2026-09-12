@@ -29,7 +29,7 @@ function SelekcjaPage() {
   return (
     <AppShell>
       <p className="text-[11px] uppercase tracking-[0.22em] text-muted">
-        V26 Liga · 11.09.2026 · best-of 05.09 + rano 08.09
+        V26 Liga · 12.09.2026 · sitko kuponu 2×2 · 1:0 / 0:1
       </p>
       <h1 className="mt-2 font-display text-4xl">Standard selekcji meczów</h1>
       <p className="mt-3 max-w-2xl text-muted">
@@ -37,10 +37,11 @@ function SelekcjaPage() {
         (10 HIT) + sitko rana 08.09 (9 HIT). Conf nie tnie listy.
       </p>
       <div className="mt-4 flex flex-wrap gap-2">
-        <Badge variant="accent">11.09.2026</Badge>
+        <Badge variant="accent">12.09.2026</Badge>
         <Badge>sitko 1.40–1.75</Badge>
         <Badge variant="warn">soft 1.70–2.10</Badge>
         <Badge variant="ok">CORE 1:0 / 0:1</Badge>
+        <Badge>BTTS NIE / U2.5</Badge>
         <Badge variant="danger">1b OUT</Badge>
         <Badge>Conf nie tnie</Badge>
       </div>
@@ -132,18 +133,51 @@ function SelekcjaPage() {
         </Card>
       </Step>
 
-      <Step n="Warstwa 2" title="Po pełnym V26 K0–K18">
+      <Step n="Warstwa 2" title="Po K18 — sitko kuponu 2×2 · 1:0 / 0:1">
+        <p className="text-sm text-muted">
+          Tu wybierasz najlepsze mecze pod dwójkę. Operator bierze TOP3 z karty. Nic nie dopisuje, nie
+          łata slotów.
+        </p>
+        <div className="grid gap-3 md:grid-cols-2">
+          <Card className="p-5">
+            <Badge variant="ok">Na dwójkę</Badge>
+            <p className="mt-3 font-display text-2xl">CORE 1:0 albo 0:1</p>
+            <ul className="mt-3 space-y-2">
+              <Dot>
+                oraz <span className="text-fg">BTTS NIE</span> albo <span className="text-fg">U2.5</span>
+              </Dot>
+              <Dot>
+                dom → <span className="text-fg">1:0</span>, wyjazd → <span className="text-fg">0:1</span>
+              </Dot>
+              <Dot>pasmo Soft / sitko</Dot>
+            </ul>
+          </Card>
+          <Card className="p-5">
+            <Badge variant="warn">Nie na dwójkę</Badge>
+            <p className="mt-3 font-display text-2xl">zostaje TOP3</p>
+            <ul className="mt-3 space-y-2">
+              <Dot>1:1 / 0:0 / 1:2 / 2:1 — rozliczenie, nie kupon 2×2</Dot>
+              <Dot>short 2:0 / 2:1 / 1:0 — nawet gdy EPL 2:1, nie forsuj</Dot>
+              <Dot>short z EPL 2:1 zostaje na TOP3, nie na dwójkę</Dot>
+            </ul>
+          </Card>
+        </div>
+        <Card className="p-5">
+          <h3 className="font-display text-xl">Nie jako EPL1</h3>
+          <p className="mt-3 text-sm text-muted">3:0 / 4:0 / 3:1 — poza pierwszym slotem.</p>
+        </Card>
+        <Card className="p-5">
+          <h3 className="font-display text-xl">Info na karcie, nie sito</h3>
+          <p className="mt-3 text-sm text-muted">
+            H2H, xG, kartki, seria, Conf — na karcie jako informacja. Nie tną dwójki.
+          </p>
+        </Card>
         <Card className="p-5">
           <ul className="space-y-2">
             <Dot>
               Operator bierze <span className="text-fg">TOP3 z programu</span>. Nic nie dopisuje (ani
-              1:1, ani 2:0, ani 3:0). Nie łata slotów.
+              1:1, ani 2:0, ani 3:0).
             </Dot>
-            <Dot>
-              Na dwójkę 2×2 tylko gdy karta da CORE <span className="text-fg">1:0 albo 0:1</span>.
-            </Dot>
-            <Dot>Zostaje na rozliczeniu TOP3, nie forsuj na dwójkę: 1:1 / 0:0 / 1:2 / 2:1.</Dot>
-            <Dot>Nie jako EPL1: 3:0 / 4:0 / 3:1.</Dot>
             <Dot>Profil chaos (Craiova: 3:1 / 2:2 / 0:3) poza dwójką.</Dot>
             <Dot>Martwy underdog = sitko kuponu, nie listy.</Dot>
             <Dot>Dwa kupony po dwa.</Dot>
@@ -152,9 +186,9 @@ function SelekcjaPage() {
         <Card className="p-5">
           <h3 className="font-display text-xl">Conf</h3>
           <p className="mt-3 text-sm text-muted">
-            Conf jest na karcie jako informacja. Nie tnie listy. Z archiwum 03–09.09: 42/51 HIT{" "}
-            {`< 70`}. Całe 08.09 (9 HIT) było 45.7–63.8. Bez XI program sam stawia Conf 69% / NO
-            EXECUTION. To nie jest sitko rana.
+            Conf jest na karcie jako informacja. Nie tnie listy. Nie tnie dwójki. Z archiwum 03–09.09:
+            42/51 HIT {`< 70`}. Całe 08.09 (9 HIT) było 45.7–63.8. Bez XI program sam stawia Conf 69% /
+            NO EXECUTION. To nie jest sitko rana.
           </p>
         </Card>
       </Step>

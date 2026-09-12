@@ -3446,6 +3446,10 @@ describe("11.09 matching — Praga/Bukareszt/Wil + FNL/Challenge/Ykkönen", () =
     assert.equal(leagueIdFromHint("Singapore Premier League"), 368);
     assert.equal(leagueIdFromHint("Premier League"), 39);
     assert.equal(leagueIdFromHint("I Liga"), 107);
+    assert.equal(resolveLeague("Chrobry Głogów", "Pogoń Siedlce", "Ekstraklasa"), "I Liga");
+    assert.equal(resolveLeague("Ruch Chorzów", "Podbeskidzie Bielsko-Biała", "Ekstraklasa"), "I Liga");
+    assert.equal(leagueHintFromClubs("Chrobry Głogów", "Pogoń Siedlce"), "I Liga");
+    assert.equal(leagueHintFromClubs("Ruch Chorzów", "Podbeskidzie"), "I Liga");
     assert.equal(resolveLeague("Ninh Binh", "Dong A Thanh Hoa", "Wietnam - V-League 1"), "V-League");
     assert.equal(resolveLeague("Port FC", "Lamphun Warrior", "Tajlandia - Thai League 1"), "Thai League 1");
     assert.equal(resolveLeague("Tampines Rovers", "Balestier Khalsa", "Premier League"), "Singapore Premier League");

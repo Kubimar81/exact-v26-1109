@@ -37,6 +37,7 @@ export function fotmobLeagueId(league: string): number | null {
   if (/bialorus|\bbelarus\b|vysshaya|vysheyshaya/.test(n)) return 263;
   if (/rumun|romania|liga i/.test(n)) return 158;
   if (/ekstraklasa/.test(n)) return 196;
+  if (/\bi liga\b|fortuna 1 liga/.test(n) && !/rumun|romania/.test(n)) return 197;
   if (/ligat|izrael|\bisrael\b/.test(n)) return 63;
   if (/(argentyn|argentina)/.test(n) && /nacional/.test(n)) return 242;
   if (/(argentyn|argentina)|liga profesional/.test(n)) return 112;

@@ -7,7 +7,9 @@ describe("FotMob box — Superettan / OBOS", () => {
     assert.equal(fotmobLeagueId("1. Division Norway"), 203);
     assert.equal(fotmobLeagueId("Norwegia - 1.Division"), 203);
     assert.equal(fotmobLeagueId("Superettan"), 168);
-    assert.equal(fotmobLeagueId("Eliteserien"), null);
+    assert.equal(fotmobLeagueId("Ekstraklasa"), 196);
+    assert.equal(fotmobLeagueId("I Liga"), 197);
+    assert.equal(fotmobLeagueId("Fortuna 1 Liga"), 197);
     assert.equal(fotmobLeagueId("Premier League"), null);
     assert.equal(fotmobLeagueId("Calcutta Premier Division"), null);
     assert.equal(fotmobLeagueId("Cymru Premier"), 116);

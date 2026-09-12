@@ -62,6 +62,8 @@ describe("Flashscore box — Calcutta Premier Division", () => {
     assert.equal(flashscoreLeaguePath("I Liga"), "/football/poland/division-1/");
     assert.equal(flashscoreLeaguePath("I Liga", "Polonia Warszawa", "Polonia Bytom"), "/football/poland/division-1/");
     assert.equal(flashscoreLeaguePath("Ekstraklasa", "Polonia Warszawa", "Polonia Bytom"), "/football/poland/division-1/");
+    assert.equal(flashscoreLeaguePath("Ekstraklasa", "Chrobry Głogów", "Pogoń Siedlce"), "/football/poland/division-1/");
+    assert.equal(flashscoreLeaguePath("Ekstraklasa", "Ruch Chorzów", "Podbeskidzie Bielsko-Biała"), "/football/poland/division-1/");
     assert.equal(flashscoreLeaguePath("V-League"), "/football/vietnam/v-league-1/");
     assert.equal(flashscoreLeaguePath("Wietnam - V-League 1"), "/football/vietnam/v-league-1/");
     assert.equal(flashscoreLeaguePath("Thai League 1"), "/football/thailand/thai-league/");

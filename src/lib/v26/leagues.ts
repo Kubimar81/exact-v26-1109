@@ -413,6 +413,12 @@ const CLUB_LEAGUE: [string, string][] = [
   ["poloniawarszawa", "I Liga"],
   ["poloniabytom", "I Liga"],
   ["bytom", "I Liga"],
+  ["chrobtyglogow", "I Liga"],
+  ["chrobry", "I Liga"],
+  ["pogonsiedlce", "I Liga"],
+  ["siedlce", "I Liga"],
+  ["ruchchorzow", "I Liga"],
+  ["podbeskidzie", "I Liga"],
 ];
 
 function clubLeague(name: string): string | null {

@@ -8,12 +8,3 @@ dist
 .DS_Store
 public/exact-v26.zip
 public/exact-v26.rar
-.vercel
-.output
-.nitro
-.tanstack
-.vinxi
-.cache
-logs
-data/analyses/*.json
-data/analyses/_cold

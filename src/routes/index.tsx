@@ -10,6 +10,7 @@ import { decisionTone, fmtKickoff, fmtPct } from "@/lib/v26/format";
 import { fmtTtl } from "@/lib/v26/archive-ttl";
 import { verdictLabel, verdictTone } from "@/lib/v26/wniosek";
 import { loadArchive, useAnalyses } from "@/lib/v26/store";
+import { listArchivedAnalyses } from "@/lib/v26/archive-api";
 import { MarketPreviewChips, MarketResultChips } from "@/components/analysis/market-chips";
 import type { SavedAnalysis } from "@/lib/v26/types";
 
@@ -17,14 +18,18 @@ function isPinnedRow(a: SavedAnalysis) {
   return Boolean(a.demo) || a.id.startsWith("test-") || a.id.startsWith("demo-");
 }
 
-export const Route = createFileRoute("/")({ component: Home });
+export const Route = createFileRoute("/")({
+  loader: () => listArchivedAnalyses(),
+  component: Home,
+});
 
 function Home() {
+  const disk = Route.useLoaderData();
   const items = useAnalyses((s) => s.items);
   useEffect(() => {
     void loadArchive();
   }, []);
-  const live = items.filter((a) => !isPinnedRow(a));
+  const live = (items.length ? items : Array.isArray(disk) ? disk : []).filter((a) => !isPinnedRow(a));
 
   return (
     <AppShell>

@@ -11,7 +11,10 @@ import { tickWnioski } from "@/lib/v26/wniosek-api";
 import { runEngine } from "@/lib/v26/engine";
 import type { SavedAnalysis } from "@/lib/v26/types";
 
-export const Route = createFileRoute("/archiwum")({ component: ArchivePage });
+export const Route = createFileRoute("/archiwum")({
+  loader: () => listColdArchivedAnalyses(),
+  component: ArchivePage,
+});
 
 function dayLabel(iso: string) {
   const t = Date.parse(iso);
@@ -35,7 +38,8 @@ function withEngine(a: SavedAnalysis): SavedAnalysis {
 }
 
 function ArchivePage() {
-  const [rows, setRows] = useState<SavedAnalysis[] | null>(null);
+  const initial = Route.useLoaderData();
+  const [rows, setRows] = useState<SavedAnalysis[] | null>(Array.isArray(initial) ? initial : null);
   useEffect(() => {
     let stop = false;
     void tickWnioski()

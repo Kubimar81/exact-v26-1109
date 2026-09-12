@@ -28,6 +28,7 @@ Przywróć program z GitHuba Kubimar81/exact-v26-1109 — V26 Liga standard 12.0
 | I Liga | Chrobry / Ruch / Siedlce / Podbeskidzie → liga 107; SOT/rożne z Flashscore |
 | Pulpit | bez listy dnia, bez szablonów meczów — kartę dodajesz sam |
 | Archiwum | 2 h po HIT/MISS, plik zostaje, da się otworzyć / wyciągnąć |
+| Karty | snapshot pulpitu + `_cold` jedzie z repo — nowa karta nie startuje pusta |
 | Silnik | K0–K18 HOLD — nie patchować z Tabeli 23 ani Archiwum |
 
 ## Test zapisu

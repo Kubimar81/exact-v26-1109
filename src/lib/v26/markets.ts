@@ -88,6 +88,97 @@ function blend(emp: number, model: number, w = 0.55) {
   return w * emp + (1 - w) * model;
 }
 
+function q10(n: number) {
+  return Math.round(n * 10) / 10;
+}
+
+/** Surowe % na panel podsumowujący — bez progu 40% z kuponu. Silnik HOLD. */
+export type SummaryRates = {
+  hasForm: boolean;
+  tot: number;
+  xgHome: number;
+  xgaHome: number;
+  xgAway: number;
+  xgaAway: number;
+  cornersHome: number;
+  cornersAway: number;
+  cardsHome: number;
+  cardsAway: number;
+  bttsYes: number;
+  bttsNo: number;
+  o15: number;
+  o25: number;
+  u25: number;
+  h1: number;
+  h2: number;
+  l1: number;
+  l2: number;
+  cor85: number;
+  cor95: number;
+  corL: number;
+  cards35: number;
+  cards45: number;
+  cardsL: number;
+};
+
+export function summaryRates(
+  data: PhasePayload,
+  engine: Pick<EngineOutput, "stats">,
+): SummaryRates {
+  const h = data.home;
+  const a = data.away;
+  const s = engine.stats;
+  const formN = h.form.length + a.form.length;
+  const hasForm = formN >= 6 && (h.gfAvg > 0 || a.gfAvg > 0);
+  const lH = hasForm ? h.gfAvg : 0;
+  const lA = hasForm ? a.gfAvg : 0;
+  const tot = lH + lA;
+  const pBttsYes =
+    hasForm && s.bttsProjectedPct > 0
+      ? blend(s.bttsProjectedPct, tot ? (1 - Math.exp(-lH)) * (1 - Math.exp(-lA)) * 100 : 0)
+      : 0;
+  const pO25 = hasForm && s.over25ProjectedPct > 0 ? blend(s.over25ProjectedPct, tot ? poissonOver(tot, 2.5) : 0) : 0;
+  const pO15 = tot > 0 ? poissonOver(tot, 1.5) : 0;
+  const pU25 = pO25 ? 100 - pO25 : 0;
+  const pBttsNo = pBttsYes ? 100 - pBttsYes : 0;
+  const homeCls = oppClassFromPos(a.tablePos, h.tablePos);
+  const awayCls = oppClassFromPos(h.tablePos, a.tablePos);
+  const corH = classSetPiece(h.form, homeCls, "corners", h.corners || 0, "H");
+  const corA = classSetPiece(a.form, awayCls, "corners", a.corners || 0, "A");
+  const cardH = classSetPiece(h.form, homeCls, "cards", h.cards || 0, "H");
+  const cardA = classSetPiece(a.form, awayCls, "cards", a.cards || 0, "A");
+  const cardsL = combineSetPiece(cardH, cardA);
+  const corL = combineSetPiece(corH, corA);
+  const halves = matchHalfLambdas(h, a, homeCls, awayCls);
+  return {
+    hasForm,
+    tot: q10(tot),
+    xgHome: h.xg || 0,
+    xgaHome: h.xga || 0,
+    xgAway: a.xg || 0,
+    xgaAway: a.xga || 0,
+    cornersHome: s.cornersHome || h.corners || 0,
+    cornersAway: s.cornersAway || a.corners || 0,
+    cardsHome: s.cardsHome || h.cards || 0,
+    cardsAway: s.cardsAway || a.cards || 0,
+    bttsYes: q10(pBttsYes),
+    bttsNo: q10(pBttsNo),
+    o15: q10(pO15),
+    o25: q10(pO25),
+    u25: q10(pU25),
+    h1: q10(pGoalInHalf(halves.l1)),
+    h2: q10(pGoalInHalf(halves.l2)),
+    l1: halves.l1,
+    l2: halves.l2,
+    cor85: corL ? q10(poissonOver(corL, 8.5)) : 0,
+    cor95: corL ? q10(poissonOver(corL, 9.5)) : 0,
+    corL: q10(corL),
+    cards35: cardsL ? q10(poissonOver(cardsL, 3.5)) : 0,
+    cards45: cardsL ? q10(poissonOver(cardsL, 4.5)) : 0,
+    cardsL: q10(cardsL),
+  };
+}
+
 function pick(
   id: string,
   market: string,

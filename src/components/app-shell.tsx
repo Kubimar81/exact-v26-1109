@@ -105,8 +105,8 @@ export function AppShell({ children }: { children: ReactNode }) {
         </Sheet>
       </header>
 
-      <div className="md:pl-60">
-        <main className="mx-auto w-full max-w-6xl px-4 py-6 pb-16 md:px-8 md:py-10">{children}</main>
+      <div className="min-w-0 md:pl-60">
+        <main className="mx-auto w-full min-w-0 max-w-6xl px-4 py-6 pb-16 md:px-8 md:py-10">{children}</main>
       </div>
     </div>
   );

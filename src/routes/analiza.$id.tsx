@@ -7,7 +7,7 @@ import { DownloadBar } from "@/components/analysis/download-bar";
 import { EplBoard } from "@/components/analysis/epl-board";
 import { GatesPanel } from "@/components/analysis/gates-panel";
 import { MarketBoard } from "@/components/analysis/market-board";
-import { StatsGrid } from "@/components/analysis/stats-grid";
+import { SummaryBoard } from "@/components/analysis/summary-board";
 import { StepList } from "@/components/analysis/step-list";
 import { StepProgress } from "@/components/analysis/step-progress";
 import { WniosekCard } from "@/components/analysis/wniosek-card";
@@ -19,7 +19,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { mergeSteps, runEngine } from "@/lib/v26/engine";
 import { needsEnrich, hardStops } from "@/lib/v26/fill-steps";
-import { decisionTone, fmtKickoff } from "@/lib/v26/format";
+import { decisionTone, fmtKickoff, fmtXgPair } from "@/lib/v26/format";
 import { callEnrich, callPhase, callT60 } from "@/lib/v26/run-phase";
 import { missingSetPieces } from "@/lib/v26/set-piece-fallback";
 import { STEPS } from "@/lib/v26/types";
@@ -327,6 +327,33 @@ function AnalysisPage() {
         status={analysis.status}
         extra={enriching ? "Dociągam xG / SOT / timing" : t60busy ? "Sprawdzam XI T−60" : undefined}
       />
+
+      {e && (
+        <div className="mt-8 space-y-6">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <div className="text-[11px] uppercase tracking-wider text-muted">Panel podsumowujący</div>
+              <p className="font-display text-2xl">
+                {e.profile} · Conf {e.confidence.pct}%
+              </p>
+              <p className="mt-1 font-mono text-sm tabular-nums text-muted">
+                {[0, 1, 2]
+                  .map((i) => `EPL${i + 1} ${e.epl[i]?.score ?? "—"} ${e.epl[i] ? `${e.epl[i].epl.pct}%` : ""}`.trim())
+                  .join("  ·  ")}
+                {`  ·  xG ${fmtXgPair((analysis.phase2 || analysis.phase1)?.home.xg, (analysis.phase2 || analysis.phase1)?.away.xg)}`}
+              </p>
+            </div>
+            <DownloadBar analysis={analysis} />
+          </div>
+
+          <SummaryBoard
+            engine={e}
+            payload={analysis.phase2 || analysis.phase1}
+            home={analysis.input.home}
+            away={analysis.input.away}
+          />
+        </div>
+      )}
       {enriching && !running && analysis.status !== "complete" && (
         <Card className="mt-6 p-5">
           <h2 className="font-display text-xl">Dociągam braki K5 / K6 / K10</h2>
@@ -417,18 +444,6 @@ function AnalysisPage() {
 
       {e && (
         <div className="mt-8 space-y-6">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <div className="text-[11px] uppercase tracking-wider text-muted">Panel podsumowujący</div>
-              <p className="font-display text-2xl">
-                {e.profile} · Conf {e.confidence.pct}%
-              </p>
-            </div>
-            <DownloadBar analysis={analysis} />
-          </div>
-
-          <StatsGrid engine={e} />
-
           <MarketBoard engine={e} input={analysis.input} payload={analysis.phase1} />
 
           <div className="grid gap-4 lg:grid-cols-2">

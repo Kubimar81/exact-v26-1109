@@ -38,7 +38,7 @@ export function MarketBoard({
   const m = engine.markets ?? (input && payload ? buildMarkets(input, payload, engine) : undefined);
   if (!m || (m.surest.length === 0 && m.value.length === 0)) return null;
   return (
-    <div className="grid gap-4 lg:grid-cols-2">
+    <div className="grid min-w-0 gap-4 lg:grid-cols-2">
       <Card className="p-5">
         <p className="text-[11px] uppercase tracking-wider text-muted">Top 3 najpewniejsze</p>
         <h3 className="font-display text-xl">Pewność z zebranych danych</h3>

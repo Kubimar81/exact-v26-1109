@@ -72,7 +72,7 @@ describe("archiwum 2 h po HIT/MISS", () => {
         epl1: "1:0",
         hitSlot: "EPL1",
         directionOk: true,
-        events: { red: false, late90: false, squad: false, details: [] },
+        events: { red: false, og: false, late90: false, squad: false, details: [] },
         text: "HIT",
         sources: [],
         analyzedAt: new Date(Date.now() - ARCHIVE_AFTER_WNIOSEK_MS - 1000).toISOString(),

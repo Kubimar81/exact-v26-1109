@@ -13,10 +13,10 @@ export function EplBoard({
   away?: string;
 }) {
   return (
-    <Card className="p-5">
+    <Card className="min-w-0 p-5">
       <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h3 className="font-display text-xl">{eplRankingTitle(home, away)}</h3>
+        <div className="min-w-0">
+          <h3 className="font-display text-xl break-words">{eplRankingTitle(home, away)}</h3>
           <p className="text-sm text-muted">
             Central Exact {engine.centralExact} · EPF {engine.centralEpf}/10 · TOP3 Gate
           </p>
@@ -31,7 +31,7 @@ export function EplBoard({
             key={ex.score}
             className="flex items-center gap-4 rounded-md border border-border bg-elevated px-4 py-3"
           >
-            <div className="font-mono text-xs tabular-nums text-subtle">{i + 1}</div>
+            <div className="font-mono text-xs tabular-nums text-subtle">EPL{i + 1}</div>
             <div className="font-mono text-2xl tabular-nums tracking-tight">{ex.score}</div>
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-center gap-2">

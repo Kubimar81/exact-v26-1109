@@ -5,7 +5,7 @@ import { AppShell } from "@/components/app-shell";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { listColdArchivedAnalyses } from "@/lib/v26/archive-api";
-import { fmtKickoff, fmtPct, decisionTone } from "@/lib/v26/format";
+import { fmtKickoff, fmtPct, fmtXgPair, decisionTone } from "@/lib/v26/format";
 import { verdictLabel, verdictTone } from "@/lib/v26/wniosek";
 import { tickWnioski } from "@/lib/v26/wniosek-api";
 import { runEngine } from "@/lib/v26/engine";
@@ -128,7 +128,16 @@ function ArchivePage() {
                         <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 font-mono text-xs tabular-nums text-muted">
                           <span>Conf {fmtPct(a.engine.confidence.pct)}</span>
                           <span>
-                            EPL1 {a.engine.epl[0]?.score} {a.engine.epl[0]?.epl.pct}%
+                            EPL1 {a.engine.epl[0]?.score ?? "—"} {a.engine.epl[0] ? `${a.engine.epl[0].epl.pct}%` : ""}
+                          </span>
+                          <span>
+                            EPL2 {a.engine.epl[1]?.score ?? "—"} {a.engine.epl[1] ? `${a.engine.epl[1].epl.pct}%` : ""}
+                          </span>
+                          <span>
+                            EPL3 {a.engine.epl[2]?.score ?? "—"} {a.engine.epl[2] ? `${a.engine.epl[2].epl.pct}%` : ""}
+                          </span>
+                          <span>
+                            xG {fmtXgPair((a.phase2 || a.phase1)?.home.xg, (a.phase2 || a.phase1)?.away.xg)}
                           </span>
                           <span>Kierunek {a.engine.direction}</span>
                         </div>

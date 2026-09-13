@@ -8,6 +8,12 @@ export function fmtNum(n: number | undefined, digits = 2) {
   return n.toFixed(digits);
 }
 
+/** xG gospodarza – gościa. Zero po obu stronach = brak danych. */
+export function fmtXgPair(home?: number, away?: number, digits = 2) {
+  if (!((home ?? 0) > 0 || (away ?? 0) > 0)) return "—";
+  return `${fmtNum(home, digits)} – ${fmtNum(away, digits)}`;
+}
+
 export function fmtKickoff(iso?: string) {
   if (!iso) return "Termin nieustalony";
   const d = new Date(iso);

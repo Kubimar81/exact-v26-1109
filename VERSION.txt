@@ -1,5 +1,6 @@
 EXACT V26
-Wersja: 12.09.2026 (V26 Liga) · GitHub exact-v26-1109
+Wersja: 13.09.2026 (V26 Liga) · GitHub exact-v26-1109
+- 13.09.2026 09:15 Snapshot 1:1 na nową kartę. Panel podsumowujący: EPL 1/2/3 + Confidence + xG (gospodarz–gość) na karcie analizy i na pulpicie/Archiwum przed wejściem. Silnik HOLD.
 - 12.09.2026 09:47 Snapshot na nową kartę: pulpit + Archiwum (karty JSON). GitHub bez analiz = pusty podgląd. Silnik HOLD.
 - 12.09.2026 09:22 I Liga: Chrobry / Ruch / Siedlce / Podbeskidzie mapowane na 107 (OCR Ekstraklasa). SOT/rożne z Flashscore division-1. FotMob I Liga id 197. Silnik HOLD.
 - 12.09.2026 07:44 Selekcja Warstwa 2: sitko kuponu 2×2. Na dwójkę tylko CORE 1:0/0:1 + BTTS NIE albo U2.5; dom 1:0, wyjazd 0:1; Soft/sitko. Short 2:0/2:1/1:0 i EPL 2:1 zostają na TOP3. 1:1/0:0/1:2/2:1 nie forsuj. 3:0/4:0/3:1 nie EPL1. H2H/xG/kartki/seria/Conf = info, nie tną dwójki. Silnik HOLD.

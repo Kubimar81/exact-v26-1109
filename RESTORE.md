@@ -3,21 +3,22 @@
 Repo: **https://github.com/Kubimar81/exact-v26-1109**
 Lustrzane: https://github.com/Kubimar81/exact-v26-0909
 
-Wersja: **12.09.2026** · sitko kuponu 2×2 · 1:0 / 0:1 · silnik HOLD.
+Wersja: **13.09.2026** · sitko kuponu 2×2 · 1:0 / 0:1 · EPL 1/2/3 + xG w podsumowaniu · silnik HOLD.
 
 ## Co powiedzieć na nowej karcie
 
 ```
 Przywróć program. Na bazie pliku z GitHuba. Kubimar81/exact-v26-1109
-V26 Liga 12.09.2026. Standard: 1B OUT, pulpit bez listy dnia,
+V26 Liga 13.09.2026. Standard: 1B OUT, pulpit bez listy dnia,
 Archiwum 2 h po HIT/MISS, sitko kuponu 2×2 (CORE 1:0/0:1 + BTTS NIE albo U2.5).
+Podsumowanie: EPL 1, EPL 2, EPL 3 + Confidence + xG gospodarz–gość na pulpicie i w analizie.
 Silnik K0–K18 HOLD.
 ```
 
 Albo krótko:
 
 ```
-Przywróć program z GitHuba Kubimar81/exact-v26-1109 — V26 Liga standard 12.09.2026
+Przywróć program z GitHuba Kubimar81/exact-v26-1109 — V26 Liga standard 13.09.2026
 ```
 
 ## Ten standard
@@ -29,6 +30,7 @@ Przywróć program z GitHuba Kubimar81/exact-v26-1109 — V26 Liga standard 12.0
 | Pulpit | bez listy dnia, bez szablonów meczów — kartę dodajesz sam |
 | Archiwum | 2 h po HIT/MISS, plik zostaje, da się otworzyć / wyciągnąć |
 | Karty | snapshot pulpitu + `_cold` jedzie z repo — nowa karta nie startuje pusta |
+| Podsumowanie | EPL 1 / 2 / 3 + Confidence + xG (gospodarz – gość) na pulpicie i w analizie |
 | Silnik | K0–K18 HOLD — nie patchować z Tabeli 23 ani Archiwum |
 
 ## Test zapisu
@@ -41,4 +43,7 @@ Po wypchnięciu GitHub musi mieć:
 - `src/lib/v26/fotmob-box.ts` → I Liga id 197
 - `src/lib/v26/archive-ttl.ts` → `ARCHIVE_AFTER_WNIOSEK_MS = 2 * 60 * 60 * 1000`
 - `src/routes/index.tsx` → `Lista dnia nie jest w programie`
+- `src/routes/index.tsx` → `EPL2` · `EPL3` · `fmtXgPair`
 - `src/routes/dzis.tsx` → `redirect({ to: "/" })`
+- `src/components/analysis/summary-board.tsx` → `EPL {i + 1}` · `xG · gospodarz – gość`
+- `src/lib/v26/format.ts` → `export function fmtXgPair`

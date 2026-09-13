@@ -1,6 +1,6 @@
-EXACT V26 — backup 09.09.2026 15:52 (nazwa pliku: V26 Liga)
-Pobierany plik: V26 Liga.rar / V26 Liga.zip. W środku folder exact-v26 (bez zmian).
-Pulpit: SCAN_EIGHT 09.09. Karty 08.09 w Archiwum/_cold. Obserwacja lista-08 + DNA 1b.
-Mapping: Columbia OCR → Colombia Primera B id 240. Al Drah OCR = Al Diriyah (K11).
+EXACT V26 — backup 13.09.2026 (nazwa: V26 Liga)
+Repo: Kubimar81/exact-v26-1109 — snapshot 1:1 na nową kartę.
+Panel podsumowujący: EPL 1/2/3 + Confidence + xG gospodarz–gość na pulpicie i w analizie.
+Sitko kuponu 2×2 · 1B OUT · pulpit bez listy dnia · Archiwum 2 h po HIT/MISS.
 Silnik V26 HOLD. Sitko 1.40–1.75 i Soft 1.70–2.10 zamrożone 08.09. Conf po K12. Puchary/UCL poza.
 Rozpakuj folder exact-v26, npm install, skopiuj .env.example → .env, npm run dev

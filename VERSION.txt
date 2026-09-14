@@ -1,5 +1,6 @@
 EXACT V26
-Wersja: 13.09.2026 (V26 Liga) · GitHub exact-v26-1109
+Wersja: 14.09.2026 (V26 Liga) · GitHub exact-v26-1109
+- 14.09.2026 08:20 Archiwum: 34 karty z 11.09 rano (Jazz/Wil/Třinec/Kopenhaga/Ninh/Port/Tampines/Sevilla/Raków/…) dopisane — brakowało na GitHub. Silnik HOLD.
 - 13.09.2026 09:15 Snapshot 1:1 na nową kartę. Panel podsumowujący: EPL 1/2/3 + Confidence + xG (gospodarz–gość) na karcie analizy i na pulpicie/Archiwum przed wejściem. Silnik HOLD.
 - 12.09.2026 09:47 Snapshot na nową kartę: pulpit + Archiwum (karty JSON). GitHub bez analiz = pusty podgląd. Silnik HOLD.
 - 12.09.2026 09:22 I Liga: Chrobry / Ruch / Siedlce / Podbeskidzie mapowane na 107 (OCR Ekstraklasa). SOT/rożne z Flashscore division-1. FotMob I Liga id 197. Silnik HOLD.
